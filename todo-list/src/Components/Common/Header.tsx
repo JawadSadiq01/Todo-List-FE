@@ -11,7 +11,7 @@ const Header = () => {
           </div>
           <div className="flex items-center">
             <button>
-              <Avatar size={40} style={{ backgroundColor: 'gray' }} icon={<UserOutlined />} />
+              <Avatar size={40} className="bg-blue-800" icon={<UserOutlined />} />
             </button>
           </div>
         </div>

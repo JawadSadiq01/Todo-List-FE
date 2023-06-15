@@ -1,10 +1,9 @@
+import TodoCard from "../../Components/HomePage/TodoCard";
 
 function HomePage() {
   return (
-    <div className="bg-gray-100 h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-gray-900">
-        Todo app with Tailwind CSS!
-      </h1>
+    <div className="bg-white-900 pt-5 pb-5 min-h-screen flex flex-col justify-center items-center">
+      <TodoCard />
     </div>
   );
 }
