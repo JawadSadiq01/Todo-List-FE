@@ -1,4 +1,5 @@
-import React from 'react';
+import { UserOutlined } from '@ant-design/icons';
+import { Avatar } from 'antd';
 
 const Header = () => {
   return (
@@ -9,6 +10,9 @@ const Header = () => {
             <span className="text-white text-lg font-semibold">Todo App!</span>
           </div>
           <div className="flex items-center">
+            <button>
+              <Avatar size={40} style={{ backgroundColor: 'gray' }} icon={<UserOutlined />} />
+            </button>
           </div>
         </div>
       </div>
