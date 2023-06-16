@@ -96,7 +96,7 @@ const TodoCard = () => {
             type="text"
             value={inputText}
             onChange={handleInputChange}
-            className="flex-grow text-lg bg-gray-700 text-white placeholder-gray-400 border-gray-400 border-2 p-2 rounded-l-md focus:outline-none"
+            className="flex-grow w-full text-lg bg-gray-700 text-white placeholder-gray-400 border-gray-400 border-2 p-2 rounded-l-md focus:outline-none"
             placeholder="Add a new todo..."
           />
           <button
