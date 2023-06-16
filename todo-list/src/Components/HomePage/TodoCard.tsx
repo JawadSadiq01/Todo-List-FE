@@ -1,13 +1,10 @@
 import { useState } from "react";
 import TodoSubHeader from "./TodoSubHeader";
 import { Modal } from 'antd';
-import {
-  SendOutlined,
-  DeleteOutlined,
-  EditOutlined,
-  CheckCircleFilled
-} from '@ant-design/icons';
+import { SendOutlined, DeleteOutlined, EditOutlined, CheckCircleFilled } from '@ant-design/icons';
 import '../../App.css'
+import { useRecoilState } from "recoil";
+import { TodoList } from "../../store/TodoList";
 interface ITodo {
   id: number;
   text: string;
@@ -15,7 +12,9 @@ interface ITodo {
 }
 
 const TodoCard = () => {
-  const [todos, setTodos] = useState<ITodo[]>([]);
+  const [todos, setTodos] = useRecoilState(TodoList);
+
+  // const [todos, setTodos] = useState<ITodo[]>([]);
   const [inputText, setInputText] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTodo, setCurrentTodo] = useState<ITodo | undefined>();
