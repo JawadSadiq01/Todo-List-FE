@@ -1,3 +1,5 @@
+import { Typography } from "antd"
+
 function footer() {
 	return (
 		<>
@@ -7,7 +9,9 @@ function footer() {
 						<a href="https://github.com/fernandoleano" className="text-gray-400 hover:text-white mt-4 md:mt-0">
 						</a>
 					</div>
-					<p className="text-center text-gray-400 mt-4">© 2023 TaskMaster. All rights reserved.</p>
+					<Typography className="text-center text-white mt-4">
+						© 2023 TaskMaster. All rights reserved.
+					</Typography>
 				</div>
 			</footer>
 		</>
