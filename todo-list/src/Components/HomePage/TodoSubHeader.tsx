@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Divider } from 'antd';
+import { Divider, Typography } from 'antd';
 
 interface IsubHeader {
   heading?: string;
@@ -8,12 +8,10 @@ interface IsubHeader {
 const TodoSubHeader: FC<IsubHeader> = (props) => {
   const { heading } = props;
   return (
-    <>
-      <div
-        className="text-white font-bold pt-8"
-      >{heading}</div>
-      <Divider plain className="mt-4 mb-8 bg-white color-white" />
-    </>
+    <div className="mb-8">
+      <Typography className="font-bold pt-5 text-lg text-white">{heading}</Typography>
+      <Divider plain className="mt-2 bg-white color-white" />
+    </div>
   )
 }
 export default TodoSubHeader;

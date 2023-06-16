@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TodoSubHeader from "./TodoSubHeader";
-import { Modal } from 'antd';
+import { Modal, Typography } from 'antd';
 import { SendOutlined, DeleteOutlined, EditOutlined, CheckCircleFilled } from '@ant-design/icons';
 import '../../App.css'
 import { useRecoilState } from "recoil";
@@ -89,14 +89,14 @@ const TodoCard = () => {
         />
       </Modal>
       <div className="max-w-lg w-full mx-4 p-4 bg-gray-800 rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold text-white mb-4 text-center">TODO LIST</h1>
+        <Typography className="text-2xl font-bold text-white mb-4 text-center">TODO LIST</Typography>
         <TodoSubHeader heading="ADD ITEM" />
         <div className="flex mb-4">
           <input
             type="text"
             value={inputText}
             onChange={handleInputChange}
-            className="flex-grow bg-gray-700 text-white placeholder-gray-400 border-gray-400 border-2 p-2 rounded-l-md focus:outline-none"
+            className="flex-grow text-lg bg-gray-700 text-white placeholder-gray-400 border-gray-400 border-2 p-2 rounded-l-md focus:outline-none"
             placeholder="Add a new todo..."
           />
           <button
@@ -116,7 +116,7 @@ const TodoCard = () => {
                 className={`flex items-center bg-gray-700 p-3 rounded-md ${todo.completed ? 'text-gray-500 line-through' : 'text-white'
                   }`}
               >
-                <span className="flex-grow">{todo.text}</span>
+                <Typography.Text className="text-lg flex-grow text-white">{todo.text}</Typography.Text>
                 <button
                   onClick={() => handleToggleComplete(todo.id)}
                   className="text-green-500 text-2xl hover:text-green-600 ml-2 focus:outline-none"
@@ -135,7 +135,6 @@ const TodoCard = () => {
                 >
                   <EditOutlined />
                 </button>
-
               </li>
             </>
           ))}
@@ -146,7 +145,7 @@ const TodoCard = () => {
               key={todo.id}
               className={`flex items-center bg-gray-700 p-3 rounded-md `}
             >
-              <span className="flex-grow text-gray-500 line-through">{todo.text}</span>
+              <Typography.Text className="text-lg flex-grow text-gray-500 line-through">{todo.text}</Typography.Text>
               <button
                 onClick={() => handleToggleComplete(todo.id)}
                 className="text-2xl text-green-500 hover:text-green-600 ml-2 focus:outline-none"
@@ -163,9 +162,10 @@ const TodoCard = () => {
           ))}
         </ul>
         <div className="mt-8 text-white">
-          <p>
-            Total Todos: {todos.length} | Completed Todos: {completedTodos}
-          </p>
+          <Typography.Text className="text-lg flex-grow text-white">
+            Total Todos: {todos.length}
+            <br />
+            Completed Todos: {completedTodos}</Typography.Text>
         </div>
       </div>
     </>
