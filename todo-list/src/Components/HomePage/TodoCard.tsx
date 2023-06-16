@@ -17,7 +17,6 @@ interface ITodo {
 const TodoCard = () => {
   const [todos, setTodos] = useState<ITodo[]>([]);
   const [inputText, setInputText] = useState('');
-  const [quote, setQuote] = useState({ q: '', a: '' });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTodo, setCurrentTodo] = useState<ITodo | undefined>();
   const completedTodos = todos.filter(todo => todo.completed).length;

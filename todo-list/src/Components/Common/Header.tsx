@@ -7,7 +7,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex items-center">
-            <span className="text-white text-lg font-semibold">Todo App!</span>
+            <a href="/" className="text-white text-lg font-semibold">Todo App!</a>
+            <a href="/blog" className="inline-block mx-3 py-1 px-4 text-white  rounded-lg  hover:bg-gray-700">Blog</a>
           </div>
           <div className="flex items-center">
             <button>
