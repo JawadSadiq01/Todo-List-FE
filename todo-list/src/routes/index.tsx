@@ -16,4 +16,5 @@ const RouteComponent = () => {
     </Router>
   )
 }
+
 export default RouteComponent;
