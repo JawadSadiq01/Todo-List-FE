@@ -8,6 +8,7 @@ interface Ichild {
 
 const Layout: FC<Ichild> = (props) => {
   const { children } = props;
+
   return (
     <div>
       <Header />
@@ -16,4 +17,5 @@ const Layout: FC<Ichild> = (props) => {
     </div>
   )
 }
+
 export default Layout;

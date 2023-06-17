@@ -18,13 +18,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
   font-size: calc(10px + 2vmin);
+  background-color: #282c34;
   color: white;
 }
 
@@ -44,8 +44,8 @@
 
 /* classes for custom edit modal */
 .custom-modal {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-top: 5rem;
 }
@@ -68,7 +68,7 @@
 }
 
 .custom-modal .ant-btn-primary {
-  background-color: blue;
+  background-color: #282c34;
 }
 
 .custom-modal .anticon svg {
